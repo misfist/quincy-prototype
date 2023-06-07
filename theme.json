@@ -45,14 +45,9 @@
                     "color": "#D04440"
                 },
 				{
-					"color": "#345C00",
-					"name": "Secondary",
-					"slug": "secondary"
-				},
-				{
-					"color": "#F6F6F6",
 					"name": "Tertiary",
-					"slug": "tertiary"
+					"slug": "tertiary",
+					"color": "#273052"
 				},
                 {
                     "name": "Text",
@@ -71,13 +66,18 @@
                 },
 				{
                     "name": "White",
-                    "slug": "base",
+                    "slug": "white",
                     "color": "#ffffff"
                 },
 				{
                     "name": "Black",
-                    "slug": "contrast",
+                    "slug": "black",
                     "color": "#000000"
+                },
+				{
+                    "name": "Contrast",
+                    "slug": "contrast",
+                    "color": "var(--wp--preset--color--primary)"
                 }
             ],
 			"defaultPalette": false,
@@ -529,27 +529,27 @@
 			}
 		},
 		"color": {
-			"background": "var(--wp--preset--color--base)",
-			"text": "var(--wp--preset--color--contrast)"
+			"background": "var(--wp--preset--color--white)",
+			"text": "var(--wp--preset--color--text)"
 		},
 		"elements": {
 			"button": {
 				":active": {
 					"color": {
 						"background": "var(--wp--preset--color--secondary)",
-						"text": "var(--wp--preset--color--base)"
+						"text": "var(--wp--preset--color--white)"
 					}
 				},
 				":focus": {
 					"color": {
 						"background": "var(--wp--preset--color--contrast)",
-						"text": "var(--wp--preset--color--base)"
+						"text": "var(--wp--preset--color--white)"
 					}
 				},
 				":hover": {
 					"color": {
 						"background": "var(--wp--preset--color--contrast)",
-						"text": "var(--wp--preset--color--base)"
+						"text": "var(--wp--preset--color--white)"
 					}
 				},
 				":visited": {
