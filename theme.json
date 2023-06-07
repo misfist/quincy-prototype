@@ -80,6 +80,7 @@
                     "color": "#000000"
                 }
             ],
+			"defaultPalette": false,
 			"duotone": [],
 			"gradients": []
 		},
