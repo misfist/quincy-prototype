@@ -72,9 +72,16 @@
                     "color": "#000000"
                 }
             ],
-			"defaultPalette": false,
+			"custom": false,
 			"duotone": [],
-			"gradients": []
+			"gradients": [],
+			"defaultPalette": false,
+			"defaultGradients": false,
+            "customDuotone": false,
+            "customGradient": false,
+            "link": true,
+            "text": true,
+            "background": true
 		},
 		"layout": {
 			"contentSize": "1140px",
