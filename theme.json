@@ -549,16 +549,6 @@
 						"left": "0"
 					}
 				}
-			},
-			"core/post-template": {
-				"spacing": {
-					"padding": {
-						"top": "var(--wp--preset--spacing--2)",
-						"right": "var(--wp--preset--spacing--1)",
-						"bottom": "var(--wp--preset--spacing--2)",
-						"left": "var(--wp--preset--spacing--1)"
-					}
-				}
 			}
 		},
 		"color": {
