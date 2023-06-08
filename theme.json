@@ -1,12 +1,11 @@
 {
 	"customTemplates": [
 		{
-			"name": "blank",
+			"name": "front-page",
 			"postTypes": [
-				"page",
-				"post"
+				"page"
 			],
-			"title": "Blank"
+			"title": "Front Page"
 		},
 		{
 			"name": "home",
