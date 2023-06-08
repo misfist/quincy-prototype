@@ -1,9 +1,29 @@
-<!-- wp:group {"layout":{"type":"constrained"}} -->
-<div class="wp-block-group"><!-- wp:group {"align":"wide","style":{"spacing":{"padding":{"bottom":"var:preset|spacing|40"}}},"layout":{"type":"flex","orientation":"vertical"}} -->
-<div class="wp-block-group alignwide" style="padding-bottom:var(--wp--preset--spacing--40)"><!-- wp:site-logo {"width":300,"shouldSyncIcon":false} /-->
+<!-- wp:group {"style":{"elements":{"link":{"color":{"text":"var:preset|color|white"}}}},"backgroundColor":"primary","textColor":"white","layout":{"type":"constrained"}} -->
+<div class="wp-block-group has-white-color has-primary-background-color has-text-color has-background has-link-color">
+    <!-- wp:group {"layout":{"type":"flex","flexWrap":"nowrap","justifyContent":"space-between"}} -->
+    <div class="wp-block-group"><!-- wp:site-logo {"width":300,"shouldSyncIcon":false} /-->
 
-<!-- wp:site-title {"level":0,"className":"screen-reader-text"} /-->
+        <!-- wp:group {"layout":{"type":"flex","orientation":"vertical"}} -->
+        <div class="wp-block-group"><!-- wp:buttons -->
+            <div class="wp-block-buttons">
+                <!-- wp:button {"backgroundColor":"secondary","textColor":"white","fontFamily":"dm-sans"} -->
+                <div class="wp-block-button has-dm-sans-font-family"><a
+                        class="wp-block-button__link has-white-color has-secondary-background-color has-text-color has-background wp-element-button"
+                        href="https://quincyinstdev.wpengine.com/donations/">Support QI</a></div>
+                <!-- /wp:button -->
+            </div>
+            <!-- /wp:buttons -->
 
-<!-- wp:navigation {"ref":11236,"layout":{"type":"flex","setCascadingProperties":true,"justifyContent":"right"}} /--></div>
-<!-- /wp:group --></div>
+            <!-- wp:search {"showLabel":false,"buttonPosition":"button-inside","buttonUseIcon":true,"backgroundColor":"secondary","textColor":"white"} /-->
+        </div>
+        <!-- /wp:group -->
+    </div>
+    <!-- /wp:group -->
+
+    <!-- wp:group {"align":"wide","style":{"spacing":{"padding":{"bottom":"var:preset|spacing|40"}}},"layout":{"type":"flex","flexWrap":"nowrap","justifyContent":"center"}} -->
+    <div class="wp-block-group alignwide" style="padding-bottom:var(--wp--preset--spacing--40)">
+        <!-- wp:navigation {"ref":11236,"layout":{"type":"flex","setCascadingProperties":true,"justifyContent":"right"}} /-->
+    </div>
+    <!-- /wp:group -->
+</div>
 <!-- /wp:group -->
