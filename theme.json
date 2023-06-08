@@ -16,13 +16,6 @@
 			"title": "Home"
 		},
 		{
-			"name": "blog-alternative",
-			"postTypes": [
-				"page"
-			],
-			"title": "Blog (Alternative)"
-		},
-		{
 			"name": "404",
 			"postTypes": [
 				"page"
