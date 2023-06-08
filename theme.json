@@ -324,6 +324,10 @@
 			},
 			"core/post-title": {
 				"level": 3
+			},
+			"core/social-links": {
+				"openInNewTab": true,
+				"className": "is-style-logos-only"
 			}
 		}
 	},
