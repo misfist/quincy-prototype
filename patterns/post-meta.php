@@ -1,7 +1,7 @@
 <?php
 /**
  * Title: Post Meta
- * Slug: quincyprototype/post-meta
+ * Slug: quincy-prototype/post-meta
  * Categories: query
  * Keywords: post meta
  * Block Types: core/template-part/post-meta
@@ -25,7 +25,7 @@
 			<div class="wp-block-group">
 				<!-- wp:paragraph -->
 				<p>
-					<?php echo esc_html_x( 'Posted', 'Verb to explain the publication status of a post', 'quincyprototype' ); ?>
+					<?php echo esc_html_x( 'Posted', 'Verb to explain the publication status of a post', 'quincy-prototype' ); ?>
 				</p>
 				<!-- /wp:paragraph -->
 
@@ -33,7 +33,7 @@
 
 				<!-- wp:paragraph -->
 				<p>
-					<?php echo esc_html_x( 'in', 'Preposition to show the relationship between the post and its categories', 'quincyprototype' ); ?>
+					<?php echo esc_html_x( 'in', 'Preposition to show the relationship between the post and its categories', 'quincy-prototype' ); ?>
 				</p>
 				<!-- /wp:paragraph -->
 
@@ -45,7 +45,7 @@
 			<div class="wp-block-group">
 				<!-- wp:paragraph -->
 				<p>
-					<?php echo esc_html_x( 'by', 'Preposition to show the relationship between the post and its author', 'quincyprototype' ); ?>
+					<?php echo esc_html_x( 'by', 'Preposition to show the relationship between the post and its author', 'quincy-prototype' ); ?>
 				</p>
 				<!-- /wp:paragraph -->
 
@@ -61,7 +61,7 @@
 			<div class="wp-block-group">
 				<!-- wp:paragraph -->
 				<p>
-					<?php echo esc_html_x( 'Tags:', 'Label for a list of post tags', 'quincyprototype' ); ?>
+					<?php echo esc_html_x( 'Tags:', 'Label for a list of post tags', 'quincy-prototype' ); ?>
 				</p>
 				<!-- /wp:paragraph -->
 

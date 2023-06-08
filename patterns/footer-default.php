@@ -1,7 +1,7 @@
 <?php
 /**
  * Title: Default Footer
- * Slug: quincyprototype/footer-default
+ * Slug: quincy-prototype/footer-default
  * Categories: footer
  * Block Types: core/template-part/footer
  */
@@ -16,8 +16,8 @@
 		<?php
 		printf(
 			/* Translators: WordPress link. */
-			esc_html__( 'Proudly powered by %s', 'quincyprototype' ),
-			'<a href="' . esc_url( __( 'https://wordpress.org', 'quincyprototype' ) ) . '" rel="nofollow">WordPress</a>'
+			esc_html__( 'Proudly powered by %s', 'quincy-prototype' ),
+			'<a href="' . esc_url( __( 'https://wordpress.org', 'quincy-prototype' ) ) . '" rel="nofollow">WordPress</a>'
 		)
 		?>
 		</p>
