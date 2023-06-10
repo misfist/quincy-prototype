@@ -13,8 +13,8 @@
 <h1 class="alignwide"><?php echo esc_html_x( '404', 'Error code for a webpage that is not found.', 'quincy-prototype' ); ?></h1>
 <!-- /wp:heading -->
 
-<!-- wp:group {"align":"wide","layout":{"type":"default"},"style":{"spacing":{"margin":{"top":"5px"}}}} -->
-<div class="wp-block-group alignwide" style="margin-top:5px">
+<!-- wp:group {"align":"wide","layout":{"type":"default"}} -->
+<div class="wp-block-group alignwide">
 	<!-- wp:paragraph -->
 	<p><?php echo esc_html_x( 'This page could not be found.', 'Message to convey that a webpage could not be found', 'quincy-prototype' ); ?></p>
 	<!-- /wp:paragraph -->

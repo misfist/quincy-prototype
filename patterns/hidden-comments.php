@@ -5,8 +5,8 @@
  * Inserter: no
  */
 ?>
-<!-- wp:group {"layout":{"type":"constrained"},"style":{"spacing":{"padding":{"top":"var:preset|spacing|40","right":"var:preset|spacing|40","bottom":"var:preset|spacing|40","left":"var:preset|spacing|40"}}}} -->
-<div class="wp-block-group" style="padding-top:var(--wp--preset--spacing--40);padding-right:var(--wp--preset--spacing--40);padding-bottom:var(--wp--preset--spacing--40);padding-left:var(--wp--preset--spacing--40)">
+<!-- wp:group {"layout":{"type":"constrained"}} -->
+<div class="wp-block-group">
 	<!-- wp:comments -->
 	<div class="wp-block-comments">
 		<!-- wp:heading {"level":2} -->
@@ -16,11 +16,11 @@
 		<!-- wp:comments-title {"level":3} /-->
 
 		<!-- wp:comment-template -->
-			<!-- wp:columns {"style":{"spacing":{"margin":{"bottom":"var:preset|spacing|40"}}}} -->
-			<div class="wp-block-columns" style="margin-bottom:var(--wp--preset--spacing--40)">
+			<!-- wp:columns -->
+			<div class="wp-block-columns">
 				<!-- wp:column {"width":"40px"} -->
 				<div class="wp-block-column" style="flex-basis:40px">
-					<!-- wp:avatar {"size":40,"style":{"border":{"radius":"20px"}}} /-->
+					<!-- wp:avatar {"size":40} /-->
 				</div>
 				<!-- /wp:column -->
 
@@ -28,8 +28,8 @@
 				<div class="wp-block-column">
 					<!-- wp:comment-author-name /-->
 
-					<!-- wp:group {"style":{"spacing":{"margin":{"top":"0px","bottom":"0px"}}},"layout":{"type":"flex"}} -->
-					<div class="wp-block-group" style="margin-top:0px;margin-bottom:0px">
+					<!-- wp:group -->
+					<div class="wp-block-group">
 						<!-- wp:comment-date /-->
 						<!-- wp:comment-edit-link /-->
 					</div>
