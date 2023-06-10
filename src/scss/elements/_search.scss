@@ -1,15 +1,21 @@
 .ep-autosuggest {
+    font-size: 1rem;
+    line-height: 1.2;
+    
     >ul {
         margin-left: 0;
         padding-left: 0;
     }
 
-    li a {
-        padding: .5rem .25rem;
+   .autosuggest-link {
+        padding-top: .5rem !important;
+        padding-bottom: .5rem !important;
     }
 
-    font-size: 1rem;
-    line-height: 1.2;
+    li + li {
+        margin-top: .5rem;
+    }
+
 }
 
 .wp-block-elasticpress-facet {
