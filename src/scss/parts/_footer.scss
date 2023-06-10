@@ -1,0 +1,7 @@
+.site-footer {
+    .wp-block-site-title {
+        font-size: map-get($font_sizes, 'small' );
+        font-weight: normal;
+        font-family: $font__sans;
+    }
+}

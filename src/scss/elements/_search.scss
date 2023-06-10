@@ -1,0 +1,36 @@
+.ep-autosuggest {
+    >ul {
+        margin-left: 0;
+        padding-left: 0;
+    }
+
+    li a {
+        padding: .5rem .25rem;
+    }
+
+    font-size: 1rem;
+    line-height: 1.2;
+}
+
+.wp-block-elasticpress-facet {
+    .empty-term {
+        display: none;
+    }
+
+    .inner {
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
+
+.wp-block-tag-cloud {
+    font-family: $font__sans;
+
+    a {
+        font-size: map-get($font_sizes, 'small') !important;
+    }
+}
+
+.wp-block-search {
+    width: 100%;
+}

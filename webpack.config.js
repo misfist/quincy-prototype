@@ -11,17 +11,9 @@ const MODE = process.env.NODE_ENV || 'development';
 module.exports = {
   context: __dirname,
   entry: {
-    quincy: ['./src/js/quincy.js', './src/js/popOver.js', './src/style/style.scss'],
-    // customizer: './src/customizer.js',
-    editor: ['./src/style/editor.scss', './src/js/editor.js'],
-    "tiny-mce": './src/style/tiny-mce.scss',
-    mobile: './src/style/mobile.scss',
-    print: './src/style/print.scss',
-    alphaFilter: './src/js/alphaFilter.js',
-    paginate: './src/js/paginate.js',
-    loadMore: './src/js/loadMore.js',
-    quincyClipboard: './src/js/quincyClipboard.js',
-    toc: './src/js/toc.js',
+    index: ['./src/js/index.js', './src/scss/index.scss'],
+    editor: './src/scss/editor.scss',
+    print: './src/scss/print.scss',
   },
   output: {
     path: path.resolve(__dirname, 'assets'),
@@ -150,8 +142,8 @@ module.exports = {
       filename: './css/[name].css'
     }),
     new BrowserSyncPlugin({
-      files: '**/*.php',
-      proxy: 'http://quincy.test'
+      files: '**/*.php,**/*.html',
+      proxy: 'https://quincyinst.test'
     }),
     new ImageMinimizerPlugin({
       severityError: 'warning', // Ignore errors on corrupted images

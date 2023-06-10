@@ -1,0 +1,31 @@
+$colors: (
+    'primary': var(--wp--preset--color--primary),
+    'secondary': var(--wp--preset--color--seconardy),
+    'tertiary': var(--wp--preset--color--tertiary),
+    'gray-dark': var(--wp--preset--color--gray-dark),
+    'gray': var(--wp--preset--color--gray),
+    'gray-light': var(--wp--preset--color--gray-light),
+    'screen': var(--wp--preset--color--screen),
+    'black': var(--wp--preset--color--black),
+    'white': var(--wp--preset--color--white),
+    'type': var(--wp--preset--color--type),
+);
+
+$breakpoints: (
+);
+
+$width: (
+    'content': var(--wp--style--global--content-size),
+    'wide': var(--wp--style--global--wide-size)
+);
+
+$font_sizes: (
+    'small': var(--wp--preset--font-size--small),
+    'medium': var(--wp--preset--font-size--medium),
+    'large': var(--wp--preset--font-size--large),
+    'x-large': var(--wp--preset--font-size--x-large),
+    'xx-large': var(--wp--preset--font-size--xx-large),
+);
+
+$font__sans: var(--wp--preset--font-family--dm-sans);
+$font__serif: var(--wp--preset--font-family--noto-serif);
