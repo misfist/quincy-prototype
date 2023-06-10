@@ -26,69 +26,69 @@
 		"appearanceTools": true,
 		"color": {
 			"palette": [
-                {
-                    "name": "Primary",
-                    "slug": "primary",
-                    "color": "#3A4778"
-                },
-                {
-                    "name": "Secondary",
-                    "slug": "secondary",
-                    "color": "#D04440"
-                },
+				{
+					"name": "Primary",
+					"slug": "primary",
+					"color": "#3A4778"
+				},
+				{
+					"name": "Secondary",
+					"slug": "secondary",
+					"color": "#D04440"
+				},
 				{
 					"name": "Tertiary",
 					"slug": "tertiary",
 					"color": "#273052"
 				},
-                {
-                    "name": "Text",
-                    "slug": "type",
-                    "color": "#222222"
-                },
-                {
-                    "name": "Gray",
-                    "slug": "gray",
-                    "color": "#4F4F4F"
-                },
-                {
-                    "name": "Light Gray",
-                    "slug": "light-gray",
-                    "color": "#F2F2F2"
-                },
 				{
-                    "name": "Screen",
-                    "slug": "screen",
-                    "color": "#faecec"
-                },
+					"name": "Text",
+					"slug": "type",
+					"color": "#222222"
+				},
 				{
-                    "name": "White",
-                    "slug": "white",
-                    "color": "#ffffff"
-                },
+					"name": "Gray",
+					"slug": "gray",
+					"color": "#4F4F4F"
+				},
 				{
-                    "name": "Black",
-                    "slug": "black",
-                    "color": "#000000"
-                }
-            ],
+					"name": "Light Gray",
+					"slug": "light-gray",
+					"color": "#F2F2F2"
+				},
+				{
+					"name": "Screen",
+					"slug": "screen",
+					"color": "#faecec"
+				},
+				{
+					"name": "White",
+					"slug": "white",
+					"color": "#ffffff"
+				},
+				{
+					"name": "Black",
+					"slug": "black",
+					"color": "#000000"
+				}
+			],
 			"custom": false,
 			"duotone": [],
 			"gradients": [],
 			"defaultPalette": false,
 			"defaultGradients": false,
-            "customDuotone": false,
-            "customGradient": false,
-            "link": true,
-            "text": true,
-            "background": true
+			"customDuotone": false,
+			"customGradient": false,
+			"link": true,
+			"text": true,
+			"background": true
 		},
 		"border": {
-            "radius": false,
-            "color": true,
-            "style": false,
-            "width": true
-        },
+			"radius": false,
+			"color": true,
+			"style": false,
+			"width": true
+		},
 		"layout": {
 			"contentSize": "1140px",
 			"wideSize": "1300px"
@@ -345,6 +345,18 @@
 			"core/social-links": {
 				"openInNewTab": true,
 				"className": "is-style-logos-only"
+			},
+			"core/tag-cloud": {
+				"numberOfTags": 12,
+				"showTagCounts": true,
+				"smallestFontSize": "var(--wp--preset--font-size--medium)",
+				"largestFontSize": "var(--wp--preset--font-size--medium)"
+			},
+			"elasticpress/facet": {
+				"orderby":"name",
+				"order":"asc",
+				"className":"alignwide",
+				"align":"wide"
 			}
 		}
 	},
@@ -559,6 +571,35 @@
 					"fontSize": "var(--wp--preset--font-size--medium)",
 					"fontWeight": "normal",
 					"lineHeight": "1.4"
+				}
+			},
+			"core/search": {
+				"elements": {
+					"button": {
+						"color": {
+							"background": "var(--wp--preset--color--primary)",
+							"text": "var(--wp--preset--color--white)"
+						},
+						":focus": {
+							"color": {
+								"background": "var(--wp--preset--color--secondary)",
+								"text": "var(--wp--preset--color--white)"
+							}
+						},
+						":hover": {
+							"color": {
+								"background": "var(--wp--preset--color--secondary)",
+								"text": "var(--wp--preset--color--white)"
+							}
+						}
+					}
+				}
+			},
+			"elasticpress/facet": {
+				"typography": {
+					"fontSize": "var(--wp--preset--font-size--small)",
+					"fontWeight": "400",
+					"fontFamily": "var(--wp--preset--font-family--dm-sans)"
 				}
 			}
 		},
