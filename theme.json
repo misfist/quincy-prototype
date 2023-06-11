@@ -47,14 +47,19 @@
 					"color": "#222222"
 				},
 				{
+					"name": "Dark Gray",
+					"slug": "gray-dark",
+					"color": "#808080"
+				},
+				{
 					"name": "Gray",
 					"slug": "gray",
-					"color": "#4F4F4F"
+					"color": "#C0C0C0"
 				},
 				{
 					"name": "Light Gray",
-					"slug": "light-gray",
-					"color": "#F2F2F2"
+					"slug": "gray-light",
+					"color": "#D3D3D3"
 				},
 				{
 					"name": "Screen",
