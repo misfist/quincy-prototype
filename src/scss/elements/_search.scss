@@ -1,18 +1,18 @@
 .ep-autosuggest {
     font-size: 1rem;
     line-height: 1.2;
-    
+
     >ul {
         margin-left: 0;
         padding-left: 0;
     }
 
-   .autosuggest-link {
+    .autosuggest-link {
         padding-top: .5rem !important;
         padding-bottom: .5rem !important;
     }
 
-    li + li {
+    li+li {
         margin-top: .5rem;
     }
 
@@ -26,6 +26,31 @@
     .inner {
         display: flex;
         flex-wrap: wrap;
+        gap: .5rem;
+        overflow: auto !important;
+    }
+}
+
+.facets {
+
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    .facet {
+        background-color: map-get($colors , 'screen');
+        padding: 1rem;
+    }
+
+    .ep-checkbox {
+        background-color: map-get($colors , 'gray-light');
+
+        &:checked,
+        &.checked {
+            background-color: map-get($colors , 'secondary');
+        }
+
+        &::after {}
     }
 }
 
