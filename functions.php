@@ -21,5 +21,5 @@ function quincy_get_theme_include_files() {
 }
 
 foreach ( quincy_get_theme_include_files() as $include ) {
-	require trailingslashit( get_template_directory() ) . $include;
+	require trailingslashit( get_stylesheet_directory() ) . $include;
 }
