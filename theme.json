@@ -1,27 +1,5 @@
 {
-	"customTemplates": [
-		{
-			"name": "front-page",
-			"postTypes": [
-				"page"
-			],
-			"title": "Front Page"
-		},
-		{
-			"name": "home",
-			"postTypes": [
-				"page"
-			],
-			"title": "Home"
-		},
-		{
-			"name": "404",
-			"postTypes": [
-				"page"
-			],
-			"title": "404"
-		}
-	],
+
 	"settings": {
 		"appearanceTools": true,
 		"color": {
@@ -274,7 +252,7 @@
 						"max": "1rem",
 						"min": "0.875rem"
 					},
-					"size": "1rem",
+					"size": "0.875rem",
 					"slug": "small"
 				},
 				{
@@ -337,6 +315,12 @@
 				"order":"asc",
 				"className":"alignwide",
 				"align":"wide"
+			}
+		},
+		"custom": {
+			"color": {
+				"yellow-light": "#FFEAB5",
+				"gray-lightest": "#F2F2F2"
 			}
 		}
 	},
@@ -723,6 +707,29 @@
 			"lineHeight": "1.6"
 		}
 	},
+	"customTemplates": [
+		{
+			"name": "front-page",
+			"postTypes": [
+				"page"
+			],
+			"title": "Front Page"
+		},
+		{
+			"name": "home",
+			"postTypes": [
+				"page"
+			],
+			"title": "Blog"
+		},
+		{
+			"name": "404",
+			"postTypes": [
+				"page"
+			],
+			"title": "404"
+		}
+	],
 	"templateParts": [
 		{
 			"area": "header",
@@ -733,6 +740,61 @@
 			"area": "footer",
 			"name": "footer",
 			"title": "Footer"
+		},
+		{
+			"area": "sidebar",
+			"name": "sidebar",
+			"title": "Sidebar"
+		},
+		{
+			"area": "content",
+			"name": "content-top",
+			"title": "Content Top"
+		},
+		{
+			"area": "content",
+			"name": "content-bottom",
+			"title": "Content Bottom"
+		},
+		{
+			"area": "content",
+			"name": "pagination",
+			"title": "Query Pagination"
+		},
+		{
+			"area": "search",
+			"name": "search",
+			"title": "Search"
+		},
+		{
+			"area": "search",
+			"name": "facet-experts",
+			"title": "Expert Facet"
+		},
+		{
+			"area": "search",
+			"name": "facet-product-types",
+			"title": "Product Type Facet"
+		},
+		{
+			"area": "search",
+			"name": "facet-programs",
+			"title": "Program Area Facet"
+		},
+		{
+			"area": "search",
+			"name": "facet-people",
+			"title": "People Facet"
+		},
+		{
+			"area": "search",
+			"name": "facet-entities",
+			"title": "Entities Facet"
+		},
+		{
+			"area": "search",
+			"name": "facet-regions",
+			"title": "Region Facet"
 		},
 		{
 			"area": "uncategorized",
