@@ -9,6 +9,8 @@ $colors: (
     'black': var(--wp--preset--color--black),
     'white': var(--wp--preset--color--white),
     'type': var(--wp--preset--color--type),
+    'yellow-light': var(--wp--custom--color--yellow-light),
+    'gray-lightest': var(--wp--custom--color--gray-lightest),
 );
 
 $breakpoints: (
@@ -35,6 +37,7 @@ $font_sizes: (
 
 $font__sans: var(--wp--preset--font-family--dm-sans);
 $font__serif: var(--wp--preset--font-family--noto-serif);
+$font__system: var(--wp--preset--font-family--system-font);
 
 $spacing: (
     1: var(--wp--preset--spacing--1),
