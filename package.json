@@ -4,7 +4,7 @@
   "description": "Custom WordPress theme.",
   "main": "index.js",
   "scripts": {
-    "start": "npm run dev",
+    "start": "cross-env NODE_ENV=development wp-scripts start",
     "build": "webpack --mode=production",
     "dev": "webpack --mode=development --watch --quiet",
     "eslint": "eslint \"src/**/*.{js,jsx}\" --quiet",
@@ -35,6 +35,7 @@
     "babel-loader": "^8.2.1",
     "browser-sync": "^2.26.13",
     "browser-sync-webpack-plugin": "^2.3.0",
+    "cross-env": "^7.0.3",
     "css-loader": "^3.6.0",
     "css-mqpacker": "^7.0.0",
     "eslint": "^6.5.1",
