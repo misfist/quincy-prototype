@@ -467,8 +467,8 @@
 				},
 				"spacing": {
 					"margin": {
-						"bottom": "var(--wp--preset--spacing--40) !important",
-						"top": "var(--wp--preset--spacing--40) !important"
+						"bottom": "var(--wp--preset--spacing--4) !important",
+						"top": "var(--wp--preset--spacing--4) !important"
 					}
 				},
 				"typography": {
@@ -516,8 +516,8 @@
 				},
 				"spacing": {
 					"padding": {
-						"left": "var(--wp--preset--spacing--30)",
-						"right": "var(--wp--preset--spacing--30)"
+						"left": "var(--wp--preset--spacing--3)",
+						"right": "var(--wp--preset--spacing--3)"
 					}
 				}
 			},
@@ -572,6 +572,14 @@
 								"text": "var(--wp--preset--color--white)"
 							}
 						}
+					}
+				}
+			},
+			"core/cover": {
+				"spacing": {
+					"padding": {
+						"bottom": "var(--wp--preset--spacing--4)",
+						"top": "var(--wp--preset--spacing--4)"
 					}
 				}
 			},

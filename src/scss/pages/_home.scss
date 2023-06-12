@@ -9,6 +9,11 @@
             padding-top: map-get($spacing, 3);
             padding-bottom: map-get($spacing, 3);
 
+            &#feature {
+                padding-top: 0;
+                padding-bottom: 0;
+            }
+
         }
     }
 
