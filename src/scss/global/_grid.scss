@@ -1,0 +1,42 @@
+.grid,
+.is-flex-container {
+    display: grid !important;
+    grid-auto-columns: 1fr;
+    gap: 1rem;
+
+    > * {
+        width: initial !important;
+    }
+    
+    @include breakpoint(small, min, screen) {}
+
+    @include breakpoint(medium, min, screen) {
+        grid-template-columns: repeat(2,1fr);
+
+        &.columns-6 {
+            grid-template-columns: repeat(3,1fr);
+        }
+    }
+
+    @include breakpoint(large, min, screen) {
+        grid-template-columns: repeat(3,1fr);
+
+        &.columns-2 {
+            grid-template-columns: repeat(2,1fr);
+        }
+
+        &.columns-4 {
+            grid-template-columns: repeat(4,1fr);
+        }
+
+        &.columns-5 {
+            grid-template-columns: repeat(5,1fr);
+        }
+
+        &.columns-6 {
+            grid-template-columns: repeat(6,1fr);
+        }
+    }
+
+
+}
