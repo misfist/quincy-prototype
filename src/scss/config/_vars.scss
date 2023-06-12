@@ -12,6 +12,12 @@ $colors: (
 );
 
 $breakpoints: (
+	small: 350px,
+	mobile: 320px,
+	tablet: 720px,
+    medium: 930px,
+	large: 1120px,
+	x-large: 1379px
 );
 
 $width: (
@@ -29,3 +35,16 @@ $font_sizes: (
 
 $font__sans: var(--wp--preset--font-family--dm-sans);
 $font__serif: var(--wp--preset--font-family--noto-serif);
+
+$spacing: (
+    1: var(--wp--preset--spacing--1),
+    2: var(--wp--preset--spacing--2),
+    4: var(--wp--preset--spacing--4),
+    20: var(--wp--preset--spacing--20),
+    30: var(--wp--preset--spacing--30),
+    40: var(--wp--preset--spacing--40),
+    50: var(--wp--preset--spacing--50),
+    60: var(--wp--preset--spacing--60),
+    70: var(--wp--preset--spacing--70),
+    80: var(--wp--preset--spacing--80),
+);

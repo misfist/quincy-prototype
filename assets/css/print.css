@@ -1,3 +1,53 @@
+@media print {
+  /* Ensure all font family declarations come with non-latin fallbacks */
+  /**
+ * Visually hidden content
+ */
+  /* @see https://css-tricks.com/snippets/css/prevent-long-urls-from-breaking-out-of-container/ */
+  /**
+ * Functions
+ */
+  /**
+ * Font Face
+ */
+  /* If we add the border using a regular CSS border, it won't look good on non-retina devices,
+ * since its edges can look jagged due to lack of antialiasing. In this case, we are several
+ * layers of box-shadow to add the border visually, which will render the border smoother. */
+  /* Nested sub-menu padding: 10 levels deep */
+  @keyframes fadein {
+    from {
+      opacity: 0; }
+    to {
+      opacity: 1; } }
+  @keyframes fadeout {
+    from {
+      opacity: 1; }
+    to {
+      opacity: 0; } }
+  @keyframes blur {
+    from {
+      filter: blur(1.25rem); }
+    to {
+      filter: blur(0); } }
+  /* Ensure all font family declarations come with non-latin fallbacks */
+  /**
+ * Visually hidden content
+ */
+  /* @see https://css-tricks.com/snippets/css/prevent-long-urls-from-breaking-out-of-container/ */
+  /**
+ * Functions
+ */
+  /**
+ * Font Face
+ */
+  .grid,
+  .is-flex-container {
+    display: grid !important;
+    grid-auto-columns: 1fr;
+    gap: 1rem; }
+    .grid > *,
+    .is-flex-container > * {
+      width: initial !important; } }
 
 
-/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiIuL2Nzcy9wcmludC5jc3MiLCJzb3VyY2VzQ29udGVudCI6W10sInNvdXJjZVJvb3QiOiIifQ==*/
+/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vLi9zcmMvc2Nzcy9wcmludC5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBLGlCQUFpQjtBQUNqQjtBQUNBLGlCQUFpQixFQUFFO0FBQ25CO0FBQ0E7QUFDQSxpQkFBaUI7QUFDakI7QUFDQSxpQkFBaUIsRUFBRTtBQUNuQjtBQUNBO0FBQ0EsNEJBQTRCO0FBQzVCO0FBQ0Esc0JBQXNCLEVBQUU7QUFDeEI7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0EsY0FBYztBQUNkO0FBQ0E7QUFDQSxnQ0FBZ0MsRUFBRSIsImZpbGUiOiIuL2Nzcy9wcmludC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyJAbWVkaWEgcHJpbnQge1xuICAvKiBFbnN1cmUgYWxsIGZvbnQgZmFtaWx5IGRlY2xhcmF0aW9ucyBjb21lIHdpdGggbm9uLWxhdGluIGZhbGxiYWNrcyAqL1xuICAvKipcbiAqIFZpc3VhbGx5IGhpZGRlbiBjb250ZW50XG4gKi9cbiAgLyogQHNlZSBodHRwczovL2Nzcy10cmlja3MuY29tL3NuaXBwZXRzL2Nzcy9wcmV2ZW50LWxvbmctdXJscy1mcm9tLWJyZWFraW5nLW91dC1vZi1jb250YWluZXIvICovXG4gIC8qKlxuICogRnVuY3Rpb25zXG4gKi9cbiAgLyoqXG4gKiBGb250IEZhY2VcbiAqL1xuICAvKiBJZiB3ZSBhZGQgdGhlIGJvcmRlciB1c2luZyBhIHJlZ3VsYXIgQ1NTIGJvcmRlciwgaXQgd29uJ3QgbG9vayBnb29kIG9uIG5vbi1yZXRpbmEgZGV2aWNlcyxcbiAqIHNpbmNlIGl0cyBlZGdlcyBjYW4gbG9vayBqYWdnZWQgZHVlIHRvIGxhY2sgb2YgYW50aWFsaWFzaW5nLiBJbiB0aGlzIGNhc2UsIHdlIGFyZSBzZXZlcmFsXG4gKiBsYXllcnMgb2YgYm94LXNoYWRvdyB0byBhZGQgdGhlIGJvcmRlciB2aXN1YWxseSwgd2hpY2ggd2lsbCByZW5kZXIgdGhlIGJvcmRlciBzbW9vdGhlci4gKi9cbiAgLyogTmVzdGVkIHN1Yi1tZW51IHBhZGRpbmc6IDEwIGxldmVscyBkZWVwICovXG4gIEBrZXlmcmFtZXMgZmFkZWluIHtcbiAgICBmcm9tIHtcbiAgICAgIG9wYWNpdHk6IDA7IH1cbiAgICB0byB7XG4gICAgICBvcGFjaXR5OiAxOyB9IH1cbiAgQGtleWZyYW1lcyBmYWRlb3V0IHtcbiAgICBmcm9tIHtcbiAgICAgIG9wYWNpdHk6IDE7IH1cbiAgICB0byB7XG4gICAgICBvcGFjaXR5OiAwOyB9IH1cbiAgQGtleWZyYW1lcyBibHVyIHtcbiAgICBmcm9tIHtcbiAgICAgIGZpbHRlcjogYmx1cigxLjI1cmVtKTsgfVxuICAgIHRvIHtcbiAgICAgIGZpbHRlcjogYmx1cigwKTsgfSB9XG4gIC8qIEVuc3VyZSBhbGwgZm9udCBmYW1pbHkgZGVjbGFyYXRpb25zIGNvbWUgd2l0aCBub24tbGF0aW4gZmFsbGJhY2tzICovXG4gIC8qKlxuICogVmlzdWFsbHkgaGlkZGVuIGNvbnRlbnRcbiAqL1xuICAvKiBAc2VlIGh0dHBzOi8vY3NzLXRyaWNrcy5jb20vc25pcHBldHMvY3NzL3ByZXZlbnQtbG9uZy11cmxzLWZyb20tYnJlYWtpbmctb3V0LW9mLWNvbnRhaW5lci8gKi9cbiAgLyoqXG4gKiBGdW5jdGlvbnNcbiAqL1xuICAvKipcbiAqIEZvbnQgRmFjZVxuICovXG4gIC5ncmlkLFxuICAuaXMtZmxleC1jb250YWluZXIge1xuICAgIGRpc3BsYXk6IGdyaWQgIWltcG9ydGFudDtcbiAgICBncmlkLWF1dG8tY29sdW1uczogMWZyO1xuICAgIGdhcDogMXJlbTsgfVxuICAgIC5ncmlkID4gKixcbiAgICAuaXMtZmxleC1jb250YWluZXIgPiAqIHtcbiAgICAgIHdpZHRoOiBpbml0aWFsICFpbXBvcnRhbnQ7IH0gfVxuIl0sInNvdXJjZVJvb3QiOiIifQ==*/
