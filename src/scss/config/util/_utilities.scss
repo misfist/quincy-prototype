@@ -1,0 +1,275 @@
+// Rem output with px fallback
+@mixin font-size($sizeValue: 16) {
+	font-size: $sizeValue * 1px;
+	font-size: $sizeValue / $base_unit * 1rem;
+}
+
+/* Ensure all font family declarations come with non-latin fallbacks */
+@mixin font-family($font_family: $font__body) {
+	font-family: $font_family;
+}
+
+@mixin breakpoint($breakpoint, $condition: min, $type: screen) {
+	// If $breakpoint is a key that exists in
+	// $breakpoints, get and use the value
+
+	@if map-has-key($breakpoints, $breakpoint) {
+	  $breakpoint: map-get($breakpoints, $breakpoint);
+	}
+
+
+	@if max == $condition {
+		@media #{$type} and (max-width: #{$breakpoint}) {
+			@content;
+		}
+	}
+	@else {
+		@media #{$type} and (min-width: #{$breakpoint}) {
+			@content;
+		}
+	}
+	
+}
+
+@mixin container($max-width: $size__container, $margins: $size__site-margins) {
+	padding-left: $margins;
+	padding-right: $margins;
+
+	@include breakpoint(large) {
+		margin-left: auto;
+		margin-right: auto;
+		max-width: $max-width;
+		width: 100%;
+	}
+}
+
+@mixin container-legacy($max-width: $size__container) {
+	width: 90%;
+	margin-right: auto;
+	margin-left: auto;
+	display: flex;
+	flex-direction: column;
+
+	@include breakpoint(mobile) {
+		flex-direction: row;
+		flex-wrap: wrap;
+	}
+}
+
+@mixin link-transition($attr: color) {
+	transition: $attr $link_transition ease-in-out;
+}
+
+@mixin button-transition {
+	transition: background $button_transition ease-in-out;
+}
+
+@mixin button-all-transition {
+	transition: all $button_transition ease-in-out;
+}
+
+@mixin background-transition {
+	transition: background $background_transition ease-in-out;
+}
+
+@mixin selection {
+	::-moz-selection {
+		@content;
+	}
+
+	::selection {
+		@content;
+	}
+}
+
+@mixin no-bullets {
+	list-style: none;
+	margin-bottom: 0;
+	margin-left: 0;
+	padding-left: 0;
+}
+
+/**
+ * Visually hidden content
+ */
+@mixin visually-hidden {
+	clip: rect(1px 1px 1px 1px);
+
+	/* IE6, IE7 */
+	clip: rect(1px, 1px, 1px, 1px);
+	height: 1px;
+	overflow: hidden;
+	position: absolute !important;
+	white-space: nowrap;
+	width: 1px;
+
+	/* added line */
+}
+
+/* @see https://css-tricks.com/snippets/css/prevent-long-urls-from-breaking-out-of-container/ */
+@mixin dont-break-out {
+	/* Adds a hyphen where the word breaks, if supported (No Blink) */
+	-ms-hyphens: auto;
+	-moz-hyphens: auto;
+	-webkit-hyphens: auto;
+	hyphens: auto;
+
+	/* These are technically the same, but use both */
+	overflow-wrap: break-word;
+	-ms-word-break: break-all;
+
+	/* This is the dangerous one in WebKit, as it breaks things wherever */
+	word-break: break-all;
+
+	/* Instead use this non-standard one: */
+	word-break: break-word;
+	word-wrap: break-word;
+}
+
+
+/**
+ * Functions
+ */
+@function rem-calc($size) {
+	$remSize: $size / $base_unit;
+
+	@return #{$remSize}rem;
+}
+
+@function px-calc($ptSize) {
+	$pixelSize: $ptSize * 1.3333333333;
+
+	@return #{pixelSize}px;
+}
+
+@function rem-pt-calc($ptSize) {
+	$size: px-calc($ptSize);
+
+	@return rem-calc($size);
+}
+
+@function px-pt-calc($pxSize){
+    @return #{ round($pxSize * .75) }pt;
+}
+
+@function px-in-calc($pxSize) {
+	@return #{ $pxSize * 0.0104166667 }in;
+}
+
+/// Get color from $color-palette
+///
+/// @param {key} color key from $color-palette
+///
+/// @returns {Color} color from $color-palette
+@function get-color($key) {
+	@if map-has-key($color-palette, $key) {
+		@return map-get($color-palette, $key);
+	} @else {
+		@error "given $key is not available in $color-palette";
+	}
+}
+
+@function str-replace($string, $search, $replace: '') {
+	$index: str-index($string, $search);
+
+	@if $index {
+		@return str-slice($string, 1, $index - 1) + $replace +
+			str-replace(str-slice($string, $index + str-length($search)), $search, $replace);
+	}
+
+	@return $string;
+}
+
+/**
+ * Font Face
+ */
+@mixin font-face($name, $path, $weight: null, $style: null, $exts: eot woff2 woff ttf svg) {
+	$src: null;
+
+	$extmods: (
+		eot: '?',
+		svg: '#' + str-replace($name, ' ', '_')
+	);
+
+	$formats: (
+		otf: 'opentype',
+		ttf: 'truetype'
+	);
+
+	@each $ext in $exts {
+		$extmod: if(map-has-key($extmods, $ext), $ext + map-get($extmods, $ext), $ext);
+		$format: if(map-has-key($formats, $ext), map-get($formats, $ext), $ext);
+		$src: append($src, url(quote($path + '.' + $extmod)) format(quote($format)), comma);
+	}
+
+	@font-face {
+		font-display: swap;
+		font-family: quote($name);
+		font-style: $style;
+		font-weight: $weight;
+		src: $src;
+	}
+}
+
+////
+// A collection of function for advanced type checking
+// @author Hugo Giraudel
+////
+
+@function is-number($value) {
+	@return type-of($value) == 'number';
+}
+
+@function is-time($value) {
+	@return is-number($value) and index('ms' 's', unit($value)) != null;
+}
+
+@function is-duration($value) {
+	@return is-time($value);
+}
+
+@function is-angle($value) {
+	@return is-number($value) and index('deg' 'rad' 'grad' 'turn', unit($value)) != null;
+}
+
+@function is-frequency($value) {
+	@return is-number($value) and index('Hz' 'kHz', unit($value)) != null;
+}
+
+@function is-integer($value) {
+	@return is-number($value) and round($value) == $value;
+}
+
+@function is-relative-length($value) {
+	@return is-number($value) and index('em' 'ex' 'ch' 'rem' 'vw' 'vh' 'vmin' 'vmax', unit($value)) != null;
+}
+
+@function is-absolute-length($value) {
+	@return is-number($value) and index('cm' 'mm' 'in' 'px' 'pt' 'pc', unit($value)) != null;
+}
+
+@function is-percentage($value) {
+	@return is-number($value) and unit($value) == '%';
+}
+
+@function is-length($value) {
+	@return is-relative-length($value) or is-absolute-length($value);
+}
+
+@function is-resolution($value) {
+	@return is-number($value) and index('dpi' 'dpcm' 'dppx', unit($value)) != null;
+}
+
+@function is-position($value) {
+	@return is-length($value) or is-percentage($value) or index('top' 'right' 'bottom' 'left' 'center', $value) != null;
+}
+
+
+@function encodecolor($string) {
+	@if type-of($string) == 'color' {
+        $hex: str-slice(ie-hex-str($string), 4);
+        $string:unquote("#{$hex}");
+    }
+    $string: '%23' + $string;
+	@return $string;
+}
