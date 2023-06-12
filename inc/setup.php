@@ -16,6 +16,9 @@ function setup() {
 			'mobile'  => esc_html__( 'Mobile Menu', 'quincy' ),
 		)
 	);
+
+	add_theme_support( 'editor-styles' );
+	add_editor_style( \get_stylesheet_directory() . '/assets/css/editor.css' );
 }
 add_action( 'after_setup_theme', __NAMESPACE__ . '\setup' );
 
