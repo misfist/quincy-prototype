@@ -51,6 +51,12 @@ function body_classes( $classes ) : array {
 }
 \add_filter( 'body_class', __NAMESPACE__ . '\body_classes' );
 
+/**
+ * Include in search
+ *
+ * @param object $query
+ * @return void
+ */
 function modify_search( $query ) {
     if ( ! is_admin() && $query->is_main_query() ) {
 		if ( $query->is_search ) {
@@ -59,3 +65,22 @@ function modify_search( $query ) {
 	}
 }
 add_action( 'pre_get_posts', __NAMESPACE__ . '\modify_search' );
+
+/**
+ * Render display_name for author terms
+ *
+ * @param string $label
+ * @param object $term
+ * @param bool $selected
+ * @return string $label
+ */
+function modify_facet_label( $label, $term, $selected ) {
+	if( 'author' === $term->taxonomy ) {
+		global $coauthors_plus;
+		if( $author = $coauthors_plus->get_coauthor_by( 'login', $term->name ) ) {
+			$label = $author->data->display_name;
+		}
+	}
+	return $label;
+}
+add_filter( 'ep_facet_widget_term_label', __NAMESPACE__ . '\modify_facet_label', 11, 3 );
