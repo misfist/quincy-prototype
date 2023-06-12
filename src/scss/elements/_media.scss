@@ -1,0 +1,13 @@
+
+
+.wp-block-post-featured-image {
+    overflow: hidden;
+    img {
+        transition: transform .3s;
+        
+        &:hover,
+        &:focus {
+            transform: scale(1.1);
+       }
+    }
+}
