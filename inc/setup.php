@@ -67,7 +67,7 @@ function scripts() {
 		$asset_file = include $asset_file_path;
 	} else {
 		$asset_file = array(
-			'version'      => $theme->get( 'Version' ),
+			'version'      => time(),
 			'dependencies' => array( 'wp-polyfill' ),
 		);
 	}
@@ -89,7 +89,7 @@ function preload_scripts() {
 		$asset_file = include $asset_file_path;
 	} else {
 		$asset_file = array(
-			'version'      => $theme->get( 'Version' ),
+			'version'      => time(),
 			'dependencies' => array( 'wp-polyfill' ),
 		);
 	}
